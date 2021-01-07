@@ -1,7 +1,8 @@
-package com.e.daedo
+package com.e.daedo.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.e.daedo.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

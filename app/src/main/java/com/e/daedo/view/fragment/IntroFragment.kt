@@ -1,10 +1,11 @@
-package com.e.daedo
+package com.e.daedo.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.e.daedo.R
 
 class IntroFragment : Fragment() {
     override fun onCreateView(

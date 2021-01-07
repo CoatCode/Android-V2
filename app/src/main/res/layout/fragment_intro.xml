@@ -1,9 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/intro"
-    tools:context="com.e.daedo.IntroFragment">
+    tools:context="com.e.daedo.view.fragment.IntroFragment">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="COATCODE"
+        android:textColor="@color/white"
+        android:textSize="52sp"
+        app:layout_constraintEnd_toEndOf="@+id/social_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/social_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:background="@color/lightBlack"
+        android:text="소셜 로그인"
+        android:padding="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/title_tv"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/email_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/lightBlack"
+        android:text="이메일 로그인"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/social_btn"
+        app:layout_constraintStart_toStartOf="@+id/social_btn"
+        app:layout_constraintTop_toBottomOf="@+id/social_btn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/lightBlack"
+        android:text="회원가입"
+        android:padding="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/email_btn"
+        app:layout_constraintTop_toBottomOf="@+id/email_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
