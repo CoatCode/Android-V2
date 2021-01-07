@@ -5,6 +5,6 @@
 
     <fragment
         android:id="@+id/introFragment"
-        android:name="com.e.daedo.IntroFragment"
+        android:name="com.e.daedo.view.fragment.IntroFragment"
         android:label="IntroFragment" />
 </navigation>
