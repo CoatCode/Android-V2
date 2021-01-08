@@ -6,11 +6,11 @@
     app:startDestination="@id/authManageFragment">
     <fragment
         android:id="@+id/authManageFragment"
-        android:name="com.e.daedo.view.fragment.AuthManageFragment"
+        android:name="com.e.daedo.view.fragment.AuthManagerFragment"
         android:label="fragment_auth_manage"
-        tools:layout="@layout/fragment_auth_manage" >
+        tools:layout="@layout/fragment_auth_manager" >
         <action
-            android:id="@+id/action_authManageFragment_to_loginFragment3"
+            android:id="@+id/action_authManageFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
     <fragment
