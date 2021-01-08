@@ -2,12 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".view.activity.AuthManagerActivity">
+    tools:context=".view.activity.TotalAuthActivity">
 
     <data>
         <variable
             name="viewModel"
-            type="com.e.daedo.viewModel.AuthManagerViewModel" />
+            type="com.e.daedo.viewModel.TotalAuthViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
