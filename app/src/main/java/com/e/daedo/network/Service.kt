@@ -1,7 +1,7 @@
 package com.e.daedo.network
 
 import com.e.daedo.data.request.LoginBody
-import com.e.daedo.data.request.RegisterBody
+import com.e.daedo.data.response.LoginResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
@@ -10,7 +10,7 @@ interface Service {
 
     //로그인
     @POST("/auth/login")
-    fun login(@Body loginBody: LoginBody):Call<LoginBody>
+    fun login(@Body loginBody: LoginBody):Call<LoginResponse>
 
 //    //회원가입
 //    @POST("/auth/sign-up")

@@ -1,5 +1,5 @@
 package com.e.daedo.data.response
 
-data class token(
+data class LoginResponse(
     val access_token: String = "", val refresh_token: String = ""
 )
