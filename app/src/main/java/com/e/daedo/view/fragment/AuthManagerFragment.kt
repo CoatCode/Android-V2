@@ -21,14 +21,12 @@ class AuthManagerFragment : BaseFragment<FragmentAuthManagerBinding, AuthManager
     override val viewModel: AuthManagerViewModel = AuthManagerViewModel()
     override val layoutRes: Int = R.layout.fragment_auth_manager
     override fun init() {
-        TODO("Not yet implemented")
+
     }
 
     override fun observerViewModel() {
-        with(viewModel) {
             email_btn.setOnClickListener {
                 findNavController().navigate(R.id.action_authManageFragment_to_loginFragment)
             }
         }
     }
-}
