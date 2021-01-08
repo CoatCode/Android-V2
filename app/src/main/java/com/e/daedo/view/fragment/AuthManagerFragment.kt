@@ -18,12 +18,11 @@ import kotlinx.android.synthetic.main.fragment_auth_manager.view.*
 class AuthManagerFragment : BaseFragment<FragmentSignUpBinding, AuthManagerViewModel>() {
     override val viewModel: AuthManagerViewModel = AuthManagerViewModel()
     override val layoutRes: Int = R.layout.fragment_auth_manager
+
     override fun init() {
-        TODO("Not yet implemented")
     }
 
     override fun observerViewModel() {
-        TODO("Not yet implemented")
     }
 
 }
