@@ -33,8 +33,11 @@ class AuthManagerFragment : BaseFragment<FragmentAuthManagerBinding, AuthManager
     }
 
     override fun observerViewModel() {
-           email_btn.setOnClickListener {
-                findNavController().navigate(R.id.action_authManagerFragment_to_loginFragment2)
-            }
+        email_btn.setOnClickListener {
+            findNavController().navigate(R.id.action_authManagerFragment_to_loginFragment)
+        }
+        register_btn.setOnClickListener {
+            findNavController().navigate(R.id.action_authManagerFragment_to_signUpFragment)
         }
     }
+}
