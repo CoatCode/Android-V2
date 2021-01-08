@@ -8,10 +8,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.e.daedo.R
+import com.e.daedo.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_auth_manager.*
 import kotlinx.android.synthetic.main.fragment_auth_manager.view.*
 
-class AuthManagerFragment : Fragment() {
+class AuthManagerFragment : BaseFragment {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

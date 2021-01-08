@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.AuthManageActivity"
+    tools:context=".view.activity.AuthManagerActivity"
     >
 
-   <fragment
-       android:id="@+id/introFragment"
+   <androidx.fragment.app.FragmentContainerView
+       android:id="@+id/AuthManagerFragment"
        android:name="com.e.daedo.view.fragment.AuthManagerFragment"
        android:layout_width="match_parent"
        android:layout_height="match_parent"

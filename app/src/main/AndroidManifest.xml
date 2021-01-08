@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CoCoAndroid">
-        <activity android:name=".view.activity.AuthManageActivity">
+        <activity android:name=".view.activity.AuthManagerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
