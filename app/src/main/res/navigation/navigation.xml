@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/authManageFragment">
+    app:startDestination="@id/authManagerFragment">
     <fragment
-        android:id="@+id/authManageFragment"
+        android:id="@+id/authManagerFragment"
         android:name="com.e.daedo.view.fragment.AuthManagerFragment"
         android:label="fragment_auth_manage"
         tools:layout="@layout/fragment_auth_manager" >
