@@ -7,6 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.Navigator
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.navigation.fragment.findNavController
 import com.e.daedo.R
 import com.e.daedo.base.BaseFragment
@@ -26,7 +31,7 @@ class AuthManagerFragment : BaseFragment<FragmentAuthManagerBinding, AuthManager
 
     override fun observerViewModel() {
             email_btn.setOnClickListener {
-                findNavController().navigate(R.id.action_authManageFragment_to_loginFragment)
+                Navigation.findNavController(requireActivity(),R.id.action_authManageFragment_to_loginFragment)
             }
         }
     }

@@ -13,8 +13,10 @@
             android:id="@+id/action_authManageFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.e.daedo.view.fragment.LoginFragment"
-        android:label="LoginFragment" />
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login"/>
 </navigation>
