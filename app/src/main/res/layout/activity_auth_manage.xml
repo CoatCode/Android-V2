@@ -9,10 +9,14 @@
 
    <fragment
        android:id="@+id/introFragment"
+       android:name="com.e.daedo.view.fragment.AuthManagerFragment"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       android:name="com.e.daedo.view.fragment.AuthManageFragment"
        android:layout_weight="1"
        app:defaultNavHost="true"
-       app:navGraph="@navigation/navigation"/>
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:navGraph="@navigation/navigation" />
 </androidx.constraintlayout.widget.ConstraintLayout>

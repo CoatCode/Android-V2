@@ -24,7 +24,7 @@ abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : AppCompa
 
     private fun performDataBinding() {
         binding = DataBindingUtil.setContentView(this, layoutRes)
-        binding.setVariable(BR.viewModel, viewModel)
+        //binding.setVariable(BR.viewModel, viewModel)
         binding.lifecycleOwner = this
         binding.executePendingBindings()
     }

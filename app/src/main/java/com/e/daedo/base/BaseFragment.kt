@@ -30,7 +30,7 @@ abstract class BaseFragment<VB : ViewDataBinding, VM : BaseViewModel> : Fragment
     }
 
     private fun viewModelProvider() {
-        binding.setVariable(BR.viewModel, viewModel)
+    //    binding.setVariable(BR.viewModel, viewModel)
         binding.lifecycleOwner = this
         binding.executePendingBindings()
     }
