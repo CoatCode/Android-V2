@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
-    app:startDestination="@id/introFragment">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/authManageFragment">
     <fragment
-        android:id="@+id/introFragment"
-        android:name="com.e.daedo.view.fragment.IntroFragment"
-        android:label="IntroFragment" />
+        android:id="@+id/authManageFragment"
+        android:name="com.e.daedo.view.fragment.AuthManageFragment"
+        android:label="fragment_auth_manage"
+        tools:layout="@layout/fragment_auth_manage" >
+        <action
+            android:id="@+id/action_authManageFragment_to_loginFragment3"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.e.daedo.view.fragment.LoginFragment"
+        android:label="LoginFragment" />
 </navigation>
