@@ -11,8 +11,6 @@ class SignUpFragment : BaseFragment<FragmentSignUpBinding, SignUpViewModel>() {
     override val layoutRes: Int get() = R.layout.fragment_sign_up
 
     override fun init() {
-        with(viewModel){
-        }
     }
 
     override fun observerViewModel() {
