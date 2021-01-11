@@ -5,10 +5,8 @@ import androidx.lifecycle.ViewModel
 import com.e.daedo.base.BaseViewModel
 
 class LoginViewModel : BaseViewModel() {
-    var email : String = ""
-    var password : String = ""
 
-    fun getAccount(){
-        Log.d("사발",",,,,,,,")
+    fun login(email:String, password:String){
+        Log.d("이메일","이메일 : $email,  $password")
     }
 }
