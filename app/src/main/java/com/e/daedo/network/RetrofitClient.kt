@@ -3,7 +3,7 @@ package com.e.daedo.network
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class RetrofitClient {
+object RetrofitClient {
     private var instance: Retrofit?= null
     private var API: Service?= null
     private val baseUrl: String= "https://coatcode.herokuapp.com"
