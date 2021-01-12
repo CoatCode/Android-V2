@@ -19,7 +19,7 @@ class LoginViewModel : BaseViewModel() {
     lateinit var myAPI : Service
     var sweetAlertDialog = SweetAlertDialog(this)
     fun login(email:String, password:String){
-
+//조민서 바보
         sweetAlertDialog.progressHelper.barColor = Color.parseColor("#0DE930")
         sweetAlertDialog
             .setTitleText("로딩 중")
