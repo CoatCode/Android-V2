@@ -79,7 +79,7 @@
                 android:ems="10"
                 android:fontFamily="sans-serif"
                 android:hint="이메일"
-                android:text="@={viewModel.email}"
+
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:textCursorDrawable="@drawable/cursor" />
@@ -103,7 +103,7 @@
                 android:ems="10"
                 android:fontFamily="sans-serif"
                 android:hint="비밀번호"
-                android:text="@={viewModel.password}"
+
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:textCursorDrawable="@drawable/cursor" />
@@ -119,7 +119,6 @@
             android:enabled="false"
             android:fontFamily="sans-serif"
             android:text="다음"
-            android:onClick="@={() -> viewModel.btnClick()}"
             android:textColor="#ebebeb"
             android:textSize="17.3dp"
             app:layout_constraintBottom_toBottomOf="parent"

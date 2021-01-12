@@ -21,17 +21,15 @@ class SignUpFragment : BaseFragment<FragmentSignUpBinding, SignUpViewModel>() {
     }
 
     override fun observerViewModel() {
-        with(viewModel){
 
-        }
     }
 
     private fun checkEmail(){
         if(viewModel.isEmail(EmailAddress_Et.text.toString())){
             check_email_text.text = "올바른 이메일 형식입니다."
-            check_email_text.setTextColor(get)
-            checkEmail = true
-            checkButton(checkEmail, checkPassword)
+         //   check_email_text.setTextColor(get)
+       //     checkEmail = true
+     //       checkButton(checkEmail, checkPassword)
         }else{
 
         }

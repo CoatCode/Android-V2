@@ -38,26 +38,26 @@ class SignUpViewModel : BaseViewModel() {
     }
 
 
-    fun signUp() {
-        myAPI = retrofit.create(Service::class.java)
-        myAPI.requestSignUp(
-//            SignBody(
-//                username = username.value.toString(),
-//                email = email.value.toString(),
-//                password = password.value.toString(),
-//                image =
-//            )
-        )
-            .enqueue(object : Callback<StatusInfo> {
-                override fun onFailure(call: Call<StatusInfo>, t: Throwable) {
-                    status.value = "400"
-                }
-
-                override fun onResponse(call: Call<StatusInfo>, response: Response<StatusInfo>) {
-                    status.value = response.code().toString()
-                }
-            })
-    }
+//    fun signUp() {
+//        myAPI = retrofit.create(Service::class.java)
+//        myAPI.requestSignUp(
+////            SignBody(
+////                username = username.value.toString(),
+////                email = email.value.toString(),
+////                password = password.value.toString(),
+////                image =
+////            )
+// //       )
+// //           .enqueue(object : Callback<StatusInfo> {
+////                override fun onFailure(call: Call<StatusInfo>, t: Throwable) {
+////                    status.value = "400"
+////                }
+////
+////                override fun onResponse(call: Call<StatusInfo>, response: Response<StatusInfo>) {
+////                    status.value = response.code().toString()
+////                }
+////            })
+//    }
 
     //이메일 형식 체크
     fun isEmail(email: String): Boolean {
