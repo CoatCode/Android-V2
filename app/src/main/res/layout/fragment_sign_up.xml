@@ -40,7 +40,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="18dp"
-                android:text="올바르지 않은 이메일 형식입니다."
+                android:text=""
                 android:textColor="@color/colorRed" />
 
             <ImageView
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="4dp"
-                android:text="올바르지 않은 비밀번호 형식입니다."
+                android:text=""
                 android:textColor="@color/colorRed" />
 
         </LinearLayout>
@@ -72,13 +72,14 @@
             app:layout_constraintTop_toTopOf="@+id/editText_background">
 
             <EditText
-                android:id="@+id/editTextTextEmailAddress"
+                android:id="@+id/EmailAddress_Et"
                 android:layout_width="250dp"
                 android:layout_height="35dp"
                 android:background="@android:color/transparent"
                 android:ems="10"
                 android:fontFamily="sans-serif"
                 android:hint="이메일"
+                android:text="@={viewModel.email}"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:textCursorDrawable="@drawable/cursor" />
@@ -102,6 +103,7 @@
                 android:ems="10"
                 android:fontFamily="sans-serif"
                 android:hint="비밀번호"
+                android:text="@={viewModel.password}"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:textCursorDrawable="@drawable/cursor" />
@@ -117,6 +119,7 @@
             android:enabled="false"
             android:fontFamily="sans-serif"
             android:text="다음"
+            android:onClick="@={() -> viewModel.btnClick()}"
             android:textColor="#ebebeb"
             android:textSize="17.3dp"
             app:layout_constraintBottom_toBottomOf="parent"
