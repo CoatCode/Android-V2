@@ -96,7 +96,7 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
             <EditText
-                android:id="@+id/editTextTextPassword"
+                android:id="@+id/Password_Et"
                 android:layout_width="250dp"
                 android:layout_height="35dp"
                 android:background="@android:color/transparent"
@@ -119,7 +119,7 @@
             android:enabled="false"
             android:fontFamily="sans-serif"
             android:text="다음"
-            android:onClick="@={() -> viewModel.btnClick()}"
+            android:onClick="@{() -> viewModel.btnClick()}"
             android:textColor="#ebebeb"
             android:textSize="17.3dp"
             app:layout_constraintBottom_toBottomOf="parent"

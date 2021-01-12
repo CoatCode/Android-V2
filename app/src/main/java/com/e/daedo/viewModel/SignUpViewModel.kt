@@ -1,11 +1,8 @@
 package com.e.daedo.viewModel
 
-import android.util.Log
 import android.util.Patterns
 import androidx.lifecycle.MutableLiveData
-import com.e.daedo.R
 import com.e.daedo.base.BaseViewModel
-import com.e.daedo.data.request.SignBody
 import com.e.daedo.data.response.StatusInfo
 import com.e.daedo.network.Service
 import com.e.daedo.widget.SingleLiveEvent
@@ -14,6 +11,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Retrofit
 import java.util.regex.Matcher
+import java.util.regex.Pattern
 
 class SignUpViewModel : BaseViewModel() {
 
@@ -26,8 +24,8 @@ class SignUpViewModel : BaseViewModel() {
 
     var status = MutableLiveData<String>()
 
-    val checkEmail = MutableLiveData<Boolean>()
-    var checkPassword = MutableLiveData<Boolean>()
+    var checkEmail: Boolean = false
+    var checkPassword: Boolean = false
 
     lateinit var myAPI: Service
     lateinit var retrofit: Retrofit
@@ -38,26 +36,26 @@ class SignUpViewModel : BaseViewModel() {
     }
 
 
-    fun signUp() {
-        myAPI = retrofit.create(Service::class.java)
-        myAPI.requestSignUp(
-//            SignBody(
-//                username = username.value.toString(),
-//                email = email.value.toString(),
-//                password = password.value.toString(),
-//                image =
-//            )
-        )
-            .enqueue(object : Callback<StatusInfo> {
-                override fun onFailure(call: Call<StatusInfo>, t: Throwable) {
-                    status.value = "400"
-                }
-
-                override fun onResponse(call: Call<StatusInfo>, response: Response<StatusInfo>) {
-                    status.value = response.code().toString()
-                }
-            })
-    }
+//    fun signUp() {
+//        myAPI = retrofit.create(Service::class.java)
+//        myAPI.requestSignUp(
+////            SignBody(
+////                username = username.value.toString(),
+////                email = email.value.toString(),
+////                password = password.value.toString(),
+////                image =
+////            )
+//        )
+//            .enqueue(object : Callback<StatusInfo> {
+//                override fun onFailure(call: Call<StatusInfo>, t: Throwable) {
+//                    status.value = "400"
+//                }
+//
+//                override fun onResponse(call: Call<StatusInfo>, response: Response<StatusInfo>) {
+//                    status.value = response.code().toString()
+//                }
+//            })
+//    }
 
     //이메일 형식 체크
     fun isEmail(email: String): Boolean {
@@ -68,6 +66,16 @@ class SignUpViewModel : BaseViewModel() {
             returnValue = true
         }
         return returnValue
+    }
+
+    fun isPassword(password: String): Boolean {
+        var returnValue = false
+        if (!Pattern.matches("^[a-zA-Z0-9]{10,15}\$", password)) {
+            return returnValue
+        } else {
+            returnValue = true
+            return returnValue
+        }
     }
 
     fun btnClick() {
