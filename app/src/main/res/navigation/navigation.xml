@@ -12,16 +12,20 @@
         tools:layout="@layout/fragment_auth_manager" >
         <action
             android:id="@+id/action_authManagerFragment_to_loginFragment"
-            app:destination="@id/loginFragment2" />
+            app:destination="@id/loginFragment" />
         <action
             android:id="@+id/action_authManagerFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
     </fragment>
     <fragment
-        android:id="@+id/loginFragment2"
+        android:id="@+id/loginFragment"
         android:name="com.e.daedo.view.fragment.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_authManagerFragment"
+            app:destination="@id/authManagerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.e.daedo.view.fragment.SignUpFragment"

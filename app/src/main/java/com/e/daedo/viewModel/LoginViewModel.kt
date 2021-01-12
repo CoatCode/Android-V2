@@ -7,6 +7,6 @@ import com.e.daedo.base.BaseViewModel
 class LoginViewModel : BaseViewModel() {
 
     fun login(email:String, password:String){
-        Log.d("이메일","이메일 : $email,  $password")
+        Log.d("씨발","씨발 : $password")
     }
 }
