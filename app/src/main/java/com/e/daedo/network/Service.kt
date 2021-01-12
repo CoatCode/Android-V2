@@ -5,6 +5,7 @@ import com.e.daedo.data.response.StatusInfo
 import okhttp3.MultipartBody
 import com.e.daedo.data.response.LoginResponse
 import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.Multipart
 import retrofit2.http.POST
@@ -15,7 +16,7 @@ interface Service {
     //로그인
     @POST("/auth/login")
 
-    fun login(@Body loginBody: LoginBody):Call<LoginResponse>
+    fun login(@Body loginBody: LoginBody): Call<LoginResponse>
 
     //회원가입
     @Multipart

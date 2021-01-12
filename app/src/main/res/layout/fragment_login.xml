@@ -61,7 +61,7 @@
             android:inputType="textEmailAddress"
             android:textCursorDrawable="@drawable/cursor"
             android:maxLines="1"
-            android:text="@{viewModel.email}"/>
+            />
 
         <EditText
             android:id="@+id/edit_text_text_password"
@@ -74,7 +74,7 @@
             android:inputType="textPassword"
             android:textCursorDrawable="@drawable/cursor"
             android:maxLines="1"
-            android:text="@{viewModel.password}"/>
+            />
 
     </LinearLayout>
 
@@ -93,7 +93,7 @@
         app:layout_constraintStart_toStartOf="@+id/editText_background"
         app:layout_constraintTop_toBottomOf="@+id/lost_password"
         app:layout_constraintVertical_bias="0.093"
-        android:onClick="@{()-> viewModel.getAccount()}"/>
+       />
 
     <Button
         android:id="@+id/x_btn"
