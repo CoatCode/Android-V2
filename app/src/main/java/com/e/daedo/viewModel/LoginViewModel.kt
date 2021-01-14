@@ -12,19 +12,14 @@ import com.e.daedo.data.response.StatusInfo
 import com.e.daedo.network.RetrofitClient
 import com.e.daedo.network.Service
 import retrofit2.*
-import kotlin.reflect.jvm.internal.impl.resolve.scopes.receivers.ThisClassReceiver
+
 
 class LoginViewModel : BaseViewModel() {
     lateinit var retrofit: Retrofit
     lateinit var myAPI : Service
-    var sweetAlertDialog = SweetAlertDialog(this)
+
     fun login(email:String, password:String){
-//조민서 바보
-        sweetAlertDialog.progressHelper.barColor = Color.parseColor("#0DE930")
-        sweetAlertDialog
-            .setTitleText("로딩 중")
-            .setCancelable(false)
-        sweetAlertDialog.show()
+
         retrofit = RetrofitClient.getInstance()
         myAPI = retrofit.create(Service::class.java)
         myAPI.login(LoginBody(email,password))
@@ -33,11 +28,11 @@ class LoginViewModel : BaseViewModel() {
                     call: Call<LoginResponse>,
                     response: Response<LoginResponse>
                 ) {
-
+                    Log.d("성공","성공 : ${response.code()}")
                 }
 
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-
+                    Log.d("실패","실패")
                 }
 
             })
