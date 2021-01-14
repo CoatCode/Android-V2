@@ -28,11 +28,11 @@ class LoginViewModel : BaseViewModel() {
                     call: Call<LoginResponse>,
                     response: Response<LoginResponse>
                 ) {
-
+                    Log.d("성공","성공 : ${response.code()}")
                 }
 
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-
+                    Log.d("실패","실패")
                 }
 
             })
