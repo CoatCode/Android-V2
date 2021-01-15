@@ -1,10 +1,12 @@
 package com.e.daedo.view.fragment
 
 
+import android.graphics.Color
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import androidx.navigation.fragment.findNavController
+import cn.pedant.SweetAlert.SweetAlertDialog
 import com.e.daedo.R
 import com.e.daedo.base.BaseFragment
 import com.e.daedo.databinding.FragmentLoginBinding
@@ -18,6 +20,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>() {
     override var viewModel: LoginViewModel = LoginViewModel()
     override val layoutRes: Int = R.layout.fragment_login
     private val sha512class = Sha512()
+//    val sweetAlertDialog = SweetAlertDialog(context, SweetAlertDialog.PROGRESS_TYPE)
 
     override fun init() {
 
@@ -59,6 +62,11 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>() {
 
         login_btn.setOnClickListener {
             viewModel.login(binding.editTextTextEmailAddress.text.toString(), sha512class.sha512(binding.editTextTextPassword.text.toString()))
+//            sweetAlertDialog.progressHelper.barColor = Color.parseColor("#0DE930")
+//            sweetAlertDialog
+//                .setTitleText("로딩 중")
+//                .setCancelable(false)
+//            sweetAlertDialog.show()
         }
         x_btn.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_authManagerFragment)

@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
+
+
 }
 
 android {
@@ -18,8 +20,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        dataBinding{
-            enabled = true
+        buildFeatures{
+            dataBinding = true
+            viewBinding = true
         }
     }
 
@@ -41,7 +44,7 @@ android {
 
 dependencies {
 
-    def koin_version = '2.2.2'
+
 
     //noinspection GradleDependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -56,15 +59,11 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2"
 
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
-    implementation "org.koin:koin-androidx-scope:$koin_version"
-    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
-    implementation "org.koin:koin-androidx-ext:$koin_version"
-    implementation 'com.github.f0ris.sweetalert:library:1.5.6'
+
+    implementation 'com.github.f0ris.sweetalert:library:1.6.2'
 }
