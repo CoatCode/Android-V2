@@ -7,8 +7,8 @@ import com.e.daedo.viewModel.TotalAuthViewModel
 
 class TotalAuthActivity : BaseActivity<ActivityTotalAuthBinding, TotalAuthViewModel>() {
 
-    override val viewModel: TotalAuthViewModel
-        get() = TotalAuthViewModel()
+    override val viewModel =  TotalAuthViewModel()
+
 
     override val layoutRes: Int
         get() = R.layout.activity_total_auth
